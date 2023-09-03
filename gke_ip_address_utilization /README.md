@@ -1,7 +1,7 @@
 
 # GKE IP address utilization
 
-Small tool to caculate GKE IP address utilization, support Shared VPC
+Small tool to calculate GKE IP address utilization, support Shared VPC
 
 ### Requirements
 * IAM roles:
