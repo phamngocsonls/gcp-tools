@@ -12,3 +12,5 @@ Small tool to calculate GKE IP address utilization, support Shared VPC
 	* project_env: In case you have a multi-environment network and the network CIDR may be duplicated (Shared VPC)
 	* location: GKE cluster location
 	* gcp_asset_dataset: GCP Cloud Asset Inventory dataset in BigQuery
+
+![Alt text](/gcp-tools/blob/main/image/gke_ip_address_utilization_1.jpeg?raw=true "Demo")
