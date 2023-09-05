@@ -7,7 +7,7 @@ import threading
 def round_to_nearest_multiple(number):
     start = 1
     while True:
-        if start > number:
+        if start >= number:
             return start
         start = start*2
 
