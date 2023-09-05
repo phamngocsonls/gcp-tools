@@ -101,8 +101,11 @@ if __name__ == "__main__":
             if row['project_id'] not in project_list and row['project_id'] in project_env[pje] and row['location'] == location:
                 project_list.append(row['project_id'])
             key = row['project_id'] + "_" + row['cluster'] + "_" + row['node_pool']
-            max_pod = int(row['max_pod'][row['max_pod'].find(":")+2:-1])
             network_config = row['network_config']
+            if row['max_pod'] != None or network_config.find("podIpv4CidrBlock") > -1:
+                max_pod = int(row['max_pod'][row['max_pod'].find(":")+2:-1])
+            else:
+                continue
             pod_range = network_config[network_config.find("podIpv4CidrBlock")+19:network_config.find("podRange")-3]
             if pod_range not in pod_ip_dict:
                 pod_ip_dict[pod_range] =[key]
